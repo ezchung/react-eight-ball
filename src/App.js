@@ -45,6 +45,3 @@ function App() {
 }
 
 export default App;
-
-//TODO: defaultChoice
-//Move EightBall specifics into EightBall

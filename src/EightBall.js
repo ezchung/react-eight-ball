@@ -2,6 +2,7 @@
 import './EightBall.css';
 import { useState } from "react";
 import { getRandom } from './random';
+import ResetButton from "./ResetButton";
 
 /** The component for the magic eight ball.
  * 
@@ -9,7 +10,7 @@ import { getRandom } from './random';
  * - choice (a object with msg key and color key)
  * - setChoice (function that resets choice)
  * 
- * App => EightBall
+ * App => EightBall => ResetButton
  * @returns {component}
  */
 function EightBall({ choices, defaultChoice }) {
@@ -31,6 +32,7 @@ function EightBall({ choices, defaultChoice }) {
         <i className="EightBall-i" onClick={handleClick}>
             <p className="Eightball-msg">{choice.msg}</p>
         </i>
+        <ResetButton setChoice={setChoice} defaultChoice={defaultChoice}/>
     </div>
   );
 }
