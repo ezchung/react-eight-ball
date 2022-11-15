@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw; 
+    height: 100vh;
+}
+/* vw is view width to size of browser. interpret as 100% */
+
+.EightBall{
+    border-radius:50%;
+    width: 500px;
+    height: 500px;
+    font-weight: bold;
+    color: white;
+    font-size: 25px;
+}
+
+.EightBall-i{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; 
+    height: 100%;
+}
+
+.EightBall-msg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* flex changes the structure. */
+

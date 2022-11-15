@@ -1,23 +1,25 @@
-import logo from './logo.svg';
+import React, { useState , ReactNode} from "react";
 import './App.css';
+import EightBall from "./EightBall";
 
+
+/** 
+ * App returns an EightBall component
+ * 
+ * State
+ * - choice : object with msg and color
+ * 
+ * App => EightBall
+ * @returns {ReactNode}
+ */
 function App() {
+  const defaultAnswer = {msg : "Think of a Question", color: "black" }
+
+  const [ choice, setChoice ] = useState(defaultAnswer)
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <EightBall choice={choice} setChoice={setChoice}/>
     </div>
   );
 }
