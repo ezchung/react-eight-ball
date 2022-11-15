@@ -1,16 +1,3 @@
-*{
-    margin: 0;
-    padding: 0;
-}
-
-body{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100vw; 
-    height: 100vh;
-}
-/* vw is view width to size of browser. interpret as 100% */
 
 .EightBall{
     border-radius:50%;

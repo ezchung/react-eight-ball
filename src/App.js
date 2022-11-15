@@ -1,4 +1,4 @@
-import React, { useState , ReactNode} from "react";
+import React, { ReactNode } from "react";
 import './App.css';
 import EightBall from "./EightBall";
 
@@ -13,15 +13,38 @@ import EightBall from "./EightBall";
  * @returns {ReactNode}
  */
 function App() {
-  const defaultAnswer = {msg : "Think of a Question", color: "black" }
-
-  const [ choice, setChoice ] = useState(defaultAnswer)
+  const choices = [
+    { msg: "It is certain.", color: "green" },
+    { msg: "It is decidedly so.", color: "green" },
+    { msg: "Without a doubt.", color: "green" },
+    { msg: "Yes - definitely.", color: "green" },
+    { msg: "You may rely on it.", color: "green" },
+    { msg: "As I see it, yes.", color: "green" },
+    { msg: "Most likely.", color: "green" },
+    { msg: "Outlook good.", color: "green" },
+    { msg: "Yes.", color: "green" },
+    { msg: "Signs point to yes.", color: "goldenrod" },
+    { msg: "Reply hazy, try again.", color: "goldenrod" },
+    { msg: "Ask again later.", color: "goldenrod" },
+    { msg: "Better not tell you now.", color: "goldenrod" },
+    { msg: "Cannot predict now.", color: "goldenrod" },
+    { msg: "Concentrate and ask again.", color: "goldenrod" },
+    { msg: "Don't count on it.", color: "red" },
+    { msg: "My reply is no.", color: "red" },
+    { msg: "My sources say no.", color: "red" },
+    { msg: "Outlook not so good.", color: "red" },
+    { msg: "Very doubtful.", color: "red" },
+  ];
+  const defaultChoice = {msg : "Think of a Question", color: "black" };
 
   return (
     <div className="App">
-      <EightBall choice={choice} setChoice={setChoice}/>
+      <EightBall choices={choices} defaultChoice={defaultChoice}/>
     </div>
   );
 }
 
 export default App;
+
+//TODO: defaultChoice
+//Move EightBall specifics into EightBall
